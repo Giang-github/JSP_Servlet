@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    	<!-- HelloWorldSerlet-->
+	<servlet>
+		<servlet-name>SearchServlet</servlet-name>
+		<servlet-class>com.example.demo.controller.SearchServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchServlet</servlet-name>
+		<url-pattern>/index</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>DetailServlet</servlet-name>
+		<servlet-class>com.example.demo.controller.DetailServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DetailServlet</servlet-name>
+		<url-pattern>/postdetails</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>AddServlet</servlet-name>
+		<servlet-class>com.example.demo.controller.AddServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddServlet</servlet-name>
+		<url-pattern>/addpost</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>DeleteServlet</servlet-name>
+		<servlet-class>com.example.demo.controller.DeleteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteServlet</servlet-name>
+		<url-pattern>/postdelete</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>EditServlet</servlet-name>
+		<servlet-class>com.example.demo.controller.EditServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditServlet</servlet-name>
+		<url-pattern>/postedit</url-pattern>
+	</servlet-mapping>
+</web-app>
+<!--Phần <servlet> định nghĩa một servlet mới, được gọi là HelloWorldServlet.-->
+<!--Nó chỉ định tên lớp Java được sử dụng để xử lý các yêu cầu từ client, -->
+<!--trong trường hợp này là com.example.demo.controller.HelloServlet.-->
+<!--Phần <servlet-mapping> liên kết servlet HelloWorldServlet với một URL pattern,-->
+<!--nghĩa là tất cả các yêu cầu được gửi đến URL pattern này ("/") sẽ được xử lý bởi servlet này.-->
